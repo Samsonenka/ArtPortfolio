@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>index</title>
+    <link rel="icon" href="/img/ico.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://www.modernizr.com/downloads/modernizr-latest.js"></script>
+    <script type="text/javascript" src="js/placeholder.js"></script>
+
+</head>
+<body>
+
+<p>Registration</p>
+
+<div>
+    <form th:action="@{/registration}" method="post" id="slick-login">
+        <input type="text" name="username" class="placeholder" placeholder="E-mail">
+        <input type="password" name="password" class="placeholder" placeholder="Password">
+        <input type="submit" value="Ok">
+    </form>
+</div>
+
+</body>
+</html>
