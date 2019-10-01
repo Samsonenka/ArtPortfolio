@@ -1,0 +1,19 @@
+#registration {
+    text-align:  center;
+    margin-top: 5px;
+   }
+
+A:visited {
+    color: #cecece;
+   }
+
+.logRegText{
+    margin: 0 auto;
+    margin-top: 130px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 50px;
+    text-transform: uppercase;
+}

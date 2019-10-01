@@ -6,22 +6,32 @@
 	<link rel="icon" href="/img/ico.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="/img/ico.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/css.css" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="http://www.modernizr.com/downloads/modernizr-latest.js"></script>
 	<script type="text/javascript" src="js/placeholder.js"></script>
 
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-<a th:href="@{'/registration'}">Registration</a>
-
-<div>
-	<form th:action="@{/login}" method="post" id="slick-login">
-		<input type="text" name="username" class="placeholder" placeholder="E-mail">
-		<input type="password" name="password" class="placeholder" placeholder="Password">
-		<input type="submit" value="Sign in">
-	</form>
+<div class="logRegText">
+	<p>Login</p>
 </div>
+
+	<div>
+		<form th:action="@{/login}" method="post" id="slick-login">
+			<input type="text" name="username" class="placeholder" placeholder="E-mail">
+			<input type="password" name="password" class="placeholder" placeholder="Password">
+			<input type="submit" value="Sign in">
+
+			<div id="registration">
+				<a th:href="@{'/registration'}">registration</a>
+			</div>
+		</form>
+	</div>
+
 
 </body>
 </html>
