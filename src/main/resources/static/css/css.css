@@ -17,3 +17,7 @@ A:visited {
     font-size: 50px;
     text-transform: uppercase;
 }
+
+.logo{
+    font-family: 'Mansalva', cursive;
+}

@@ -6,8 +6,9 @@
 
     <link rel="icon" href="/img/ico.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/img/ico.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -15,29 +16,23 @@
 <body>
 
 <nav class="navbar navbar-light bg-dark">
-    <a class="navbar-brand" href="#">
-        <img src="/img/artist.png" width="30" height="30" class="d-inline-block align-top textLogo" alt="">
-        Bootstrap
+
+    <a class="navbar-brand logo" th:href="@{/}">
+        <img th:src="@{/img/artist.png}" width="35" height="35" class="d-inline-block align-top" alt="">ArtPortfolio
     </a>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Gallery <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Settings <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-        </div>
+<!--    <div class="logo">-->
+<!--        ArtPortfolio-->
+<!--    </div>-->
+
+    <nav class="nav">
+        <a class="nav-link text-light" href="#">Home</a>
+        <a class="nav-link text-light" href="#">Gallery</a>
+        <a class="nav-link text-light" href="#">Settings</a>
     </nav>
 
     <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control mr-sm-2" type="search" placeholder="User name" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
 
