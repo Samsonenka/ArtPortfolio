@@ -21,10 +21,6 @@
         <img th:src="@{/img/artist.png}" width="35" height="35" class="d-inline-block align-top" alt="">ArtPortfolio
     </a>
 
-<!--    <div class="logo">-->
-<!--        ArtPortfolio-->
-<!--    </div>-->
-
     <nav class="nav">
         <a class="nav-link text-light" href="#">Home</a>
         <a class="nav-link text-light" href="#">Gallery</a>
@@ -37,6 +33,13 @@
     </form>
 
 </nav>
+
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="..." onError="this.onerror=null;this.src='/img/artist.png';">
+    <div class="card-body">
+        <p class="card-text">What do you think about?</p>
+    </div>
+</div>
 
 </body>
 </html>

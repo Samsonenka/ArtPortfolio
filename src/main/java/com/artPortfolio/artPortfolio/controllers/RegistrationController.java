@@ -1,5 +1,7 @@
 package com.artPortfolio.artPortfolio.controllers;
 
+import com.artPortfolio.artPortfolio.models.Avatar;
+import com.artPortfolio.artPortfolio.repos.AvatarRepo;
 import com.artPortfolio.artPortfolio.repos.UserRepo;
 import com.artPortfolio.artPortfolio.models.Role;
 import com.artPortfolio.artPortfolio.models.Users;
@@ -17,10 +19,11 @@ public class RegistrationController {
     @Autowired
     private UserRepo usersRepo;
 
+    @Autowired
+    private AvatarRepo avatarRepo;
+
     @GetMapping("/registration")
     public String showRegistration(){
-
-        System.out.println("Пусто!!!");
 
         return "registration";
     }
@@ -33,6 +36,9 @@ public class RegistrationController {
         user.setActive(true);
         user.setRoles(Collections.singleton(Role.USER));
         usersRepo.save(user);
+
+        Avatar newAvatar = new Avatar(user);
+        avatarRepo.save(newAvatar);
 
         return "login";
     }
