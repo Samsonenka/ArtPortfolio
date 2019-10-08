@@ -5,6 +5,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -87,5 +88,15 @@ public class Users implements UserDetails {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public Avatar findAvatar(List<Avatar> all) {
+
+        for (Avatar avatar: all){
+            if (avatar.getUser().userID == userID){
+                return avatar;
+            }
+        }
+        return null;
     }
 }

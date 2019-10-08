@@ -35,7 +35,7 @@
 </nav>
 
 <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="..." onError="this.onerror=null;this.src='/img/artist.png';">
+    <img th:src="${avatar.getAvatarUrl()}" class="card-img-top" alt="..." onError="this.onerror=null;this.src='/img/artist.png';">
     <div class="card-body">
         <p class="card-text">What do you think about?</p>
     </div>
