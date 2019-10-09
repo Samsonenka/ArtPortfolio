@@ -99,4 +99,14 @@ public class Users implements UserDetails {
         }
         return null;
     }
+
+    public PersonalData findPersonalData(List<PersonalData> all) {
+
+        for (PersonalData personalData: all){
+            if (personalData.getUser().userID == userID){
+                return personalData;
+            }
+        }
+        return null;
+    }
 }

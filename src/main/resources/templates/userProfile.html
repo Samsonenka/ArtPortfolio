@@ -34,9 +34,10 @@
 
 </nav>
 
-<div class="card" style="width: 18rem;">
+<div class="card mx-3 my-3" style="width: 18rem;">
     <img th:src="${avatar.getAvatarUrl()}" class="card-img-top" alt="..." onError="this.onerror=null;this.src='/img/artist.png';">
     <div class="card-body">
+        <h6 th:text="${personalData.getName() + ' ' + personalData.getSurname()}"></h6>
         <p class="card-text">What do you think about?</p>
     </div>
 </div>
