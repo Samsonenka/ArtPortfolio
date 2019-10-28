@@ -4,6 +4,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
@@ -108,5 +109,17 @@ public class Users implements UserDetails {
             }
         }
         return null;
+    }
+
+    public List<Photo> findPhotos(List<Photo> all) {
+
+        List<Photo> photoList = new ArrayList<>();
+
+        for (Photo photo: all){
+            if (photo.getUser().userID == userID){
+                photoList.add(photo);
+            }
+        }
+        return photoList;
     }
 }
